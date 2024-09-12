@@ -1,0 +1,155 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #007BFF;
+    --secondary-color: #F7F7F7;
+    --border-color: #EAEAEA;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1e1e1e;
+    --text-color: #f4f4f4;
+    --primary-color: #009688;
+    --secondary-color: #2c2c2c;
+    --border-color: #444444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+#searchInput {
+    width: 40%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    opacity: 0.9;
+}
+
+.theme-toggle button {
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.category-filters {
+    margin: 20px;
+    text-align: center;
+}
+
+.category-filters button {
+    margin: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category-filters button:hover {
+    background-color: var(--primary-color);
+    opacity: 0.9;
+}
+
+.country-filters {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#countrySelect {
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+#newsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.article {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.article h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.article p {
+    color: var(--text-color);
+}
+
+.article a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acowale News</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Acowale News</h1>
+        </div>
+        <input type="text" id="searchInput" placeholder="Search for news...">
+        <button onclick="fetchNews()">Search</button>
+        <div class="theme-toggle">
+            <button id="themeButton" onclick="toggleTheme()">🌙</button>
+        </div>
+    </header>
+
+    <nav class="category-filters">
+        <button onclick="fetchCategory('business')">Business</button>
+        <button onclick="fetchCategory('technology')">Technology</button>
+        <button onclick="fetchCategory('health')">Health</button>
+        <button onclick="fetchCategory('science')">Science</button>
+        <button onclick="fetchCategory('sports')">Sports</button>
+        <button onclick="fetchCategory('entertainment')">Entertainment</button>
+    </nav>
+
+    <div class="country-filters">
+        <select id="countrySelect" onchange="fetchNewsByCountry()">
+            <option value="">Select Country</option>
+            <option value="us">United States</option>
+            <option value="gb">United Kingdom</option>
+            <option value="au">Australia</option>
+            <option value="in">India</option>
+            <option value="de">Germany</option>
+            <option value="fr">France</option>
+        </select>
+    </div>
+
+    <main id="newsContainer"></main>
+
+    <footer>
+        <p>Created and Developed By Uday Kiran V</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
